@@ -17,9 +17,9 @@
     public int countNodes(TreeNode root) {
         if(root == null) return 0;
         int lh = findLeftHeight(root);
-        System.out.print(lh + ",");
+       
         int rh = findRightHeight(root);
-        System.out.println(rh);
+       
         if(lh == rh) return ((int)Math.pow(2,lh) - 1);
         return 1 + countNodes(root.left) + countNodes(root.right);
     }
